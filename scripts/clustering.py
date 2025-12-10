@@ -3,7 +3,7 @@
 Cluster PDB models by pairwise RMSD, then report representative conformations.
 
 Example:
-    python scripts/clustering.py --pdb-glob "data/predictions/bioemu/protein1/*.pdb" \
+    python scripts/clustering.py --pdb-glob "data/predictions/af-cluster/pdb/*.pdb" \
         --eps 2.0 --min-samples 2 --top-k 3 --plot rmsd.png
 """
 
@@ -27,7 +27,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--pdb-glob",
-        default="data/predictions/bioemu/protein1/*.pdb",
+        default="data/predictions/af-cluster/pdb/*.pdb",
         help="Glob for input PDB files (sorted lexicographically).",
     )
     parser.add_argument(
